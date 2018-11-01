@@ -15,7 +15,7 @@ $(function () {
       customerEmail: $('#reserve-email').val().trim(),
       customerID: $('#reserve-unique-id').val().trim()
     };
-
+    console.log(newRequest)
     // Clear the form when submitting
     $('#reserve-name').val('');
     $('#reserve-phone').val('');
