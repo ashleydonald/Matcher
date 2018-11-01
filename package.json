@@ -1,7 +1,7 @@
 {
-  "name": "table-reservations-api",
+  "name": "API matching consumer with provider",
   "version": "1.0.0",
-  "description": "Simple API for a restaurant reservations list",
+  "description": "API for a matching service requests with service providers",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,5 +13,5 @@
     "express": "^4.16.3"
   },
   "devDependencies": {},
-  "keywords": []
+  "keywords": ["matching", "finder", "database"]
 }
