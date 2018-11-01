@@ -1,83 +1,177 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Reservation Page</title>
-
-  <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Service Request Form</title>
+  <meta name="description" content="A free and modern UI toolkit for web makers based on the popular Bootstrap 4 framework.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/shards.min.css?v=2.1.0">
+  <link rel="stylesheet" href="css/shards-demo.min.css?v=2.1.0">
   <script src="/js/requests.js"></script>
 </head>
 
 <body>
+  <div class="loader">
+    <div class="page-loader"></div>
+  </div>
 
-  <div class="container">
-
-    <div class="jumbotron">
-      <h1 class="text-center">
-        <span class="fa fa-fire"></span> Hot Restaurant</h1>
-      <hr>
-      <h2 class="text-center">Make your reservation</h2>
-      <br>
-      <div class="text-center">
-        <a href="/requests">
-          <button class="btn btn-lg btn-primary">
-            <span class="fa fa-list-alt"></span> View requests</button>
-        </a>
-        <a href="/">
-          <button class="btn btn-lg btn-default">
-            <span class="fa fa-home"></span>
-          </button>
-        </a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <!-- Reservation Page -->
-        <div class="card">
-          <div class="card-header">
-            Table Reservation
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success mb-4">
+    <img src="images/demo/shards-logo.svg" alt="Example Navbar 1" class="mr-2" height="30">
+    <a class="navbar-brand" href="#">Ashley D APIs</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown-3"
+      aria-controls="navbarNavDropdown-3" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse mr-auto" id="navbarNavDropdown-3">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="https://designrevision.com" id="navbarDropdownMenuLink-3"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Services
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink-3">
+            <a class="dropdown-item" href="#">Design</a>
+            <a class="dropdown-item" href="#">Development</a>
+            <a class="dropdown-item" href="#">Marketing</a>
           </div>
-          <div class="card-body">
-            <form role="form">
-              <div class="form-group">
-                <label for="reserve-name">Name</label>
-                <input type="text" class="form-control" id="reserve-name">
+        </li>
+      </ul>
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fa fa-facebook"></i>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fa fa-github"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="page-content">
+    <!-- Content -->
+    <div class="content clearfix">
+
+      <!-- Typography -->
+      <div id="typography" class="container mb-5">
+        <div class="section-title col-lg-12 col-md-10 ml-auto mr-auto">
+            <h2 class="text-center">Make a Service Request</h2>
+          
+            <div class="text-center">
+              <a href="/requests">
+                <button class="btn btn-lg btn-success">
+                  <span class="fa fa-list-alt"></span> View requests</button>
+              </a>
+              <a href="/">
+                <button class="btn btn-lg btn-success">
+                  <span class="fa fa-home"></span>
+                </button>
+              </a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- Reservation Page -->
+            <div class="card">
+              <div class="card-header">
+                <h3>Requests</h3>
               </div>
-              <div class="form-group">
-                <label for="reserve-phone">Phone Number</label>
-                <input type="text" class="form-control" id="reserve-phone">
+              <div class="card-body">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="reserve-name">Name</label>
+                    <input type="text" class="form-control" id="reserve-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="reserve-phone">Phone Number</label>
+                    <input type="text" class="form-control" id="reserve-phone">
+                  </div>
+                  <div class="form-group">
+                    <label for="reserve-email">Email</label>
+                    <input type="text" class="form-control" id="reserve-email">
+                  </div>
+                  <div class="form-group">
+                    <label for="reserve-unique-id">Unique ID</label>
+                    <input type="text" class="form-control" id="reserve-unique-id">
+                  </div>
+                  <button type="submit" class="btn btn-primary submit">Submit</button>
+                </form>
               </div>
-              <div class="form-group">
-                <label for="reserve-email">Email</label>
-                <input type="text" class="form-control" id="reserve-email">
-              </div>
-              <div class="form-group">
-                <label for="reserve-unique-id">Unique ID</label>
-                <input type="text" class="form-control" id="reserve-unique-id">
-              </div>
-              <button type="submit" class="btn btn-primary submit">Submit</button>
-            </form>
+            </div>
           </div>
         </div>
+
+
+        <footer class="footer">
+          <div class="container">
+            <p>
+              <a href="/api/requests">API Requests Form</a> |
+              <a href="/api/applications">API Providers List</a>
+          </div>
+        </footer>
       </div>
     </div>
 
+    <!-- JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+      (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1662270373824826";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
 
-    <footer class="footer">
-      <div class="container">
-        <p>
-          <a href="/api/requests">API Table Link</a> |
-          <a href="/api/waitlist">API Wait List</a>
-      </div>
-    </footer>
-
-  </div>
+    </script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+    <script src="js/shards.min.js"></script>
+    <script src="js/demo.min.js"></script>
 
 </body>
 
