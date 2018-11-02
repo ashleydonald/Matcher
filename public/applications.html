@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Service Providers</title>
+  <title>Match Requests and Providers</title>
   <meta name="description" content="A free and modern UI toolkit for web makers based on the popular Bootstrap 4 framework.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -65,51 +65,38 @@
     <!-- Content -->
     <div class="content clearfix">
 
+      <div class="container">
 
+        <!-- Typography -->
+        <div id="typography" class="container mb-5">
+          <div class="section-title col-lg-8 col-md-10 ml-auto mr-auto">
+            <h3 class="mb-4">Match Services Needed with Providers</h3>
 
-      <!-- Typography -->
-      <div id="typography" class="container mb-5">
-        <div class="section-title col-lg-8 col-md-10 ml-auto mr-auto">
-          <h3 class="mb-4">Match Services Needed with Providers</h3>
-        </div>
+            <div class="text-center">
+              <a href="/providerApplication"><button class="btn btn-lg btn-success">
+                  <span class="fa fa-credit-card"></span> Submit a Company</button></a>
+              <a href="/"><button class="btn btn-lg btn-success"><span class="fa fa-home"></span></button></a>
+            </div>
 
-
-        <!-- Content -->
-
-        <div class="container">
-
-
-          <h1 class="text-center"><span class="fa fa-fire"></span> Apply to be a Service Provider</h1>
-          <hr>
-          <h2 class="text-center">List of Service Provider Applicants</h2>
-          <br>
-          <div class="text-center">
-            <a href="/applications"><button class="btn btn-lg btn-danger">
-                <span class="fa fa-credit-card"></span> Submit your Company</button></a>
-            <a href="/"><button class="btn btn-lg btn-default"><span class="fa fa-home"></span></button></a>
+            <main>
+              <section class="card">
+                <div class="card-header">
+                  <h6>Requests</h6>
+                </div>
+                <div class="requests card-body">
+                </div>
+              </section>
+              <br />
+              <section class="card">
+                <div class="card-header">
+                  <h6>Providers</h6>
+                </div>
+                <div class="application card-body">
+                </div>
+              </section>
+            </main>
           </div>
         </div>
-
-        <main>
-          <section class="card">
-            <div class="card-header">
-              <h2>Pending Service Requests</h2>
-            </div>
-            <div class="requests card-body">
-            </div>
-          </section>
-          <br />
-          <section class="card">
-            <div class="card-header">
-              <h2>Providers Applied</h2>
-            </div>
-            <div class="application card-body">
-            </div>
-          </section>
-          <br />
-        </main>
-
-
 
 
 

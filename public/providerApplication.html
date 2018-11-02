@@ -78,53 +78,61 @@
 
       <!-- Typography -->
       <div id="typography" class="container mb-5">
-        <div class="section-title col-lg-8 col-md-10 ml-auto mr-auto">
-          <h3 class="text-center"><span class="fa fa-fire"></span> Apply to be a Service Provider</h3>
-        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- Provider Form -->
+            <div class="text-center">
+              <h2 class="text-center">Apply to be a Service Provider</h2>
+            </div>
 
-        <!-- Providers Form -->
-        <div class="card">
-          <div class="card-header">
-            <h6>Provider Information</h6>
-          </div>
-          <div class="card-body">
-            <form role="form">
-              <div class="form-group">
-                <label for="reserve-name">Name</label>
-                <input type="text" class="form-control" id="reserve-name">
+            <div class="row">
+              <div class="col-lg-12">
+
+                <div class="card">
+                  <div class="card-header">
+                    Provider Application
+                  </div>
+                  <div class="card-body">
+                    <form role="form">
+                      <div class="form-group">
+                        <label for="reserve-name">Name</label>
+                        <input type="text" class="form-control" id="reserve-name">
+                      </div>
+                      <div class="form-group">
+                        <label for="reserve-phone">Phone Number</label>
+                        <input type="text" class="form-control" id="reserve-phone">
+                      </div>
+                      <div class="form-group">
+                        <label for="reserve-email">Email</label>
+                        <input type="text" class="form-control" id="reserve-email">
+                      </div>
+                      <div class="form-group">
+                        <label for="reserve-unique-id">Unique ID</label>
+                        <input type="text" class="form-control" id="reserve-unique-id">
+                      </div>
+                      <button type="submit" class="btn btn-primary submit">Submit</button>
+                    </form>
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="reserve-phone">Phone Number</label>
-                <input type="text" class="form-control" id="reserve-phone">
-              </div>
-              <div class="form-group">
-                <label for="reserve-email">Email</label>
-                <input type="text" class="form-control" id="reserve-email">
-              </div>
-              <div class="form-group">
-                <label for="reserve-unique-id">Unique ID</label>
-                <input type="text" class="form-control" id="reserve-unique-id">
-              </div>
-              <button type="submit" class="btn btn-primary submit">Submit</button>
-            </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- JavaScript -->
-    <div id="fb-root"></div>
-    <script>
-      (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1662270373824826";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+      <!-- JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        (function (d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1662270373824826";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
 
-    </script>
+      </script>
 
 </body>
 
