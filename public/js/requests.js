@@ -38,6 +38,7 @@ $(function () {
         // console.log(response);
         var serviceType = newRequest.customerID;
         console.log(response[serviceType]);
+        return(serviceType);
       })
     // }) AP: WE MOVED THESE TWO DOWN HERE TO DEBUG BUT TURNS OUT IT CAN STAY IN LINE 36
 
