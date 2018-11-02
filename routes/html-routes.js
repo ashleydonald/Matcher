@@ -23,6 +23,10 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, '../public/applications.html'));
   });
 
+  app.get('/providerapplication', function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/providerapplication.html'));
+  });
+
   app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '../public/index.html'));
   });
