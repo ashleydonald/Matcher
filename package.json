@@ -13,5 +13,9 @@
     "express": "^4.16.3"
   },
   "devDependencies": {},
-  "keywords": ["matching", "finder", "database"]
+  "keywords": [
+    "matching",
+    "finder",
+    "database"
+  ]
 }
