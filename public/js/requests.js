@@ -33,15 +33,15 @@ $(function () {
           method: 'GET',
           url: 'api/applications'
 
-       
+        }) // AP: MOVE THESE TWO PARENTHESES BACK UP HERE AGAIN
       }).then(function (response) {
         // console.log(response);
         var serviceType = newRequest.customerID;
         console.log(response[serviceType]);
       })
-    })
+    // }) AP: WE MOVED THESE TWO DOWN HERE TO DEBUG BUT TURNS OUT IT CAN STAY IN LINE 36
 
-
+  } // AP: MOVED CURLY BRACE FROM LINE 46 TO UP HERE IN LINE 44
     $('.submit').on('click', addRequest)
-  }
+  // } AP: DON't NEED CURLY BRACE HERE
 });
