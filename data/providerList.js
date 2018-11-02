@@ -5,7 +5,11 @@
 // ===============================================================================
 
 var providers = {
-    plumbers: "Uriel"
+    plumbers: "Uriel",
+    electrician: "Mario",
+    painter: "Angel",
+    HVAC: "Tommy",
+    contractor: "Breona"
 };
 
 // Note how we export the array. This makes it accessible to other files using require.

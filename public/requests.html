@@ -99,7 +99,20 @@
                       </div>
                       <div class="form-group">
                         <label for="reserve-unique-id">Unique ID</label>
-                        <input type="text" class="form-control" id="reserve-unique-id">
+                        <div class="dropdown" class="form-control" id="reserve-unique-id">
+                          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="serviceType">plumbers</button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item active">plumbers</a>
+                            <a class="dropdown-item active">Text</a>
+                          </div>
+                        </div>
+                        <!-- <select providers="serviceType">
+                          <option value="plumbers">Plumber</option>
+                          <option value="electricians">Electrician</option>
+                          <option value="painters">Painter</option>
+                          <option value="HVAC">HVAC</option>
+                          <option value="contractors">Contractors</option>
+                        </select> -->
                       </div>
                       <button type="submit" class="btn btn-primary submit">Submit</button>
                     </form>
