@@ -1,17 +1,22 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Matching API Home</title>
-  <meta name="description" content="A free and modern UI toolkit for web makers based on the popular Bootstrap 4 framework.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/shards.min.css?v=2.1.0">
-  <link rel="stylesheet" href="css/shards-demo.min.css?v=2.1.0">
+  <meta charset="UTF-8">
+  <title>Results Page</title>
+
+  
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <script src="/js/applications.js"></script>
+  <script src="/js/applications.js"></script>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -38,7 +43,7 @@
           <a class="nav-link" href="/requests">Requests</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/providerApplication">Providers</a>
+          <a class="nav-link" href="/applications">Providers</a>
         </li>
       </ul>
 
@@ -64,50 +69,46 @@
     <!-- Content -->
     <div class="content clearfix">
 
+  <div class="container">
 
-
-      <!-- Typography -->
-      <div id="typography" class="container mb-5">
-        <div class="section-title col-lg-8 col-md-10 ml-auto mr-auto">
-          <h1 class="text-center">Home Services Matcher</h1>
-          <div class="text-center">
-            <a href="/requests"><button class="btn btn-lg btn-success"><span class="fa fa-list-alt"></span> Make
-                Requests</button></a>
-            <a href="/applications"><button class="btn btn-lg btn-success"><span class="fa fa-credit-card"></span>
-                Match Providers</button></a>
-          </div>
-          <div class="container">
-            <p><a href="/api/requests">API Request Link</a> | <a href="/api/applications">API Application List</a>
-          </div>
-
-        </div>
+    <div class="jumbotron">
+      <h2 class="text-center">Current Requests and Providers List</h2>
+      <br>
+      <div class="text-center">
+        <a href="/requests"><button class="btn btn-lg btn-success"> Make Request</button></a>
+        <a href="/"><button class="btn btn-lg btn-success"><span class="fa fa-home"></span></button></a>
       </div>
+    </div>
 
+    <main>
+      <section class="card">
+        <div class="card-header">
+          <h2>Requests</h2>
+        </div>
+        <div class="requests card-body">
+        </div>
+      </section>
+      <br />
+      <section class="card">
+        <div class="card-header">
+          <h2>Providers</h2>
+        </div>
+        <div class="applications card-body">
+        </div>
+      </section>
+      <br />
+    </main>
+  </div>
 
-
-      <!-- JavaScript -->
-      <div id="fb-root"></div>
-      <script>
-        (function (d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s);
-          js.id = id;
-          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1662270373824826";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-      </script>
-      <script async defer src="https://buttons.github.io/buttons.js"></script>
-      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-      <script src="js/shards.min.js"></script>
-      <script src="js/demo.min.js"></script>
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <a href="/api/requests">API Requests</a> |
+        <a href="/api/applications">API Providers</a>
+    </div>
+  </footer>
 
 </body>
+
 
 </html>
