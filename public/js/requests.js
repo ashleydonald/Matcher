@@ -56,12 +56,14 @@ $(function () {
    */
   const render = function (dataList, parent) {
       for (let i = 0; i < dataList.length; i++) {
-          const requests = $('<div>').addClass('box');
-          requests.append(`<h3>${dataList[i].customerName}</h3>`);
-          requests.append(`<p>${dataList[i].customerEmail}</p>`);
-          requests.append(`<p>${dataList[i].phoneNumber}</p>`);
+          const applications = $('<div>').addClass('box');
+          applications.append(`<h3>${dataList[i].customerName}</h3>`);
+          applications.append(`<p>${dataList[i].customerEmail}</p>`);
+          applications.append(`<p>${dataList[i].phoneNumber}</p>`);
+          applications.append(`<p>${dataList[i].serviceType}</p>`);
 
-          parent.append(requests)
+
+          parent.append(applications)
       }
   }
 
@@ -87,10 +89,11 @@ $(function () {
        */
       const render = function (dataList, parent) {
           for (let i = 0; i < dataList.length; i++) {
-              const applications = $('<div>').addClass('box');
+              const requests = $('<div>').addClass('box');
               applications.append(`<h3>${dataList[i].customerName}</h3>`);
               applications.append(`<p>${dataList[i].customerEmail}</p>`);
               applications.append(`<p>${dataList[i].phoneNumber}</p>`);
+              applications.append(`<p>${dataList[i].serviceType}</p>`);
 
               parent.append(applications)
           }
