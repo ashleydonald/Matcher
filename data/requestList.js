@@ -1,4 +1,4 @@
-var requestArray = [
+var requestList = [
   {
     customerName: "Ahmed",
     customerEmail: "ahmed@example.com",
@@ -7,4 +7,4 @@ var requestArray = [
   }
 ];
 
-module.exports = requestArray;
+module.exports = requestList;

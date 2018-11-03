@@ -1,16 +1,37 @@
-// ===============================================================================
-// DATA
-// Below data will hold all of the waitlist tables.
-// Initially we just set it equal to an empty array.
-// ===============================================================================
+var providerList = [
+    {
+     customerName: "Uriel",
+     customerEmail: "urieltheplumber@gmail.com",
+     phoneNumber: "404-030-5300",
+     serviceType: "plumbers"
+    },
+    {
+     customerName: "Mario",
+     customerEmail: "mariotheelectrician@gmail.com",
+     phoneNumber: "404-530-3893",
+     serviceType: "electricians"
+    },
+    {   
+     customerName: "Angel",
+     customerEmail: "angelthepainter@gmail.com",
+     phoneNumber: "678-356-3634",
+     serviceType: "painters"
+    },
+    {
+     customerName: "Tommy",
+     customerEmail: "angelthepainter@gmail.com",
+     phoneNumber: "706-227-3564",
+     serviceType: "HVAC"
+    },
+    {
+     customerName: "Breona",
+     customerEmail: "angelthepainter@gmail.com",
+     phoneNumber: "404-985-2753",
+     serviceType: "contractors"
+    }
 
-var providers = {
-    plumbers: "Uriel",
-    electrician: "Mario",
-    painter: "Angel",
-    HVAC: "Tommy",
-    contractor: "Breona"
-};
+];
 
-// Note how we export the array. This makes it accessible to other files using require.
-module.exports = providers;
+module.exports = providerList;
+
+
