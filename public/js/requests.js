@@ -38,7 +38,7 @@ $(function () {
   
      
           console.log(newRequest.serviceType);
-          return (newRequest.serviceType);
+          // return (newRequest);
   
         });
   
