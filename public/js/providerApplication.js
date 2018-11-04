@@ -45,5 +45,3 @@ $(function () {
   $('.submit').on('click', addProvider);
 
 });
-
-
