@@ -3,41 +3,25 @@ let providerList = require('../data/providerList.js');
 
 module.exports = function (app) {
 
-  /**
-   * GET the applications
-   */
+  // GET the provider applications
   app.get('/api/providerList', function (req, res) {
     res.json(providerList);
   });
 
-  /**
-   * GET the requests 
-   */
+  // GET the requests  
   app.get('/api/requestList', function (req, res) {
     res.json(requestList);
   });
 
-  /**
-   * If there are fewer than 5 requests, add the new requests to the requests
-   */
+  // Add the new requests to the requestsList array.
   app.post('/api/requestList', function (req, res) {
-    if (requestList.length < 5) {
-      requestList.push(req.body); 
-    } else {
-      requestList.push(req.body);
-    }
-
+    requestList.push(req.body);
     res.end();
   });
 
-
+  // Add the new providers to the providerList array.
   app.post('/api/providerList', function (req, res) {
-    if (requestList.length < 5) {
-      providerList.push(req.body); 
-    } else {
-      providerList.push(req.body);
-    }
-
+    providerList.push(req.body);
     res.end();
   });
 };

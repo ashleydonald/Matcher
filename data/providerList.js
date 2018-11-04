@@ -3,19 +3,19 @@ var providerList = [
      customerName: "Uriel",
      customerEmail: "urieltheplumber@gmail.com",
      phoneNumber: "404-030-5300",
-     serviceType: "plumber"
+     serviceType: "plumbing"
     },
     {
      customerName: "Mario",
      customerEmail: "mariotheelectrician@gmail.com",
      phoneNumber: "404-530-3893",
-     serviceType: "electrician"
+     serviceType: "electrical"
     },
     {   
      customerName: "Angel",
      customerEmail: "angelthepainter@gmail.com",
      phoneNumber: "678-356-3634",
-     serviceType: "painter"
+     serviceType: "painting"
     },
     {
      customerName: "Tommy",
@@ -27,7 +27,7 @@ var providerList = [
      customerName: "Breona",
      customerEmail: "angelthepainter@gmail.com",
      phoneNumber: "404-985-2753",
-     serviceType: "contractor"
+     serviceType: "general_contracting"
     }
 
 ];
