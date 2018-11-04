@@ -4,18 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Results Page</title>
-  
+
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
   <script src="/js/requests.js"></script>
   <script src="/js/providerApplication.js"></script>
 
-  <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 </head>
 
@@ -69,44 +72,44 @@
     <!-- Content -->
     <div class="content clearfix">
 
-  <div class="container">
+      <div class="container">
 
-    <div class="jumbotron">
-      <h2 class="text-center">Current Requests and Providers List</h2>
-      <br>
-      <div class="text-center">
-        <a href="/requests"><button class="btn btn-lg btn-success"> Make Request</button></a>
-        <a href="/"><button class="btn btn-lg btn-success"><span class="fa fa-home"></span></button></a>
+        <div class="jumbotron">
+          <h2 class="text-center">Current Requests and Providers List</h2>
+          <br>
+          <div class="text-center">
+            <a href="/requests"><button class="btn btn-lg btn-success"> Make Request</button></a>
+            <a href="/"><button class="btn btn-lg btn-success"><span class="fa fa-home"></span></button></a>
+          </div>
+        </div>
+
+        <main>
+          <section class="card">
+            <div class="card-header">
+              <h2>Requests</h2>
+            </div>
+            <div class="requests card-body">
+            </div>
+          </section>
+          <br />
+          <section class="card">
+            <div class="card-header">
+              <h2>Providers</h2>
+            </div>
+            <div class="applications card-body">
+            </div>
+          </section>
+          <br />
+        </main>
       </div>
-    </div>
 
-    <main>
-      <section class="card">
-        <div class="card-header">
-          <h2>Requests</h2>
+      <footer class="footer">
+        <div class="container">
+          <p>
+            <a href="/api/requestList">API Requests</a> |
+            <a href="/api/providerList">API Providers</a>
         </div>
-        <div class="requests card-body">
-        </div>
-      </section>
-      <br />
-      <section class="card">
-        <div class="card-header">
-          <h2>Providers</h2>
-        </div>
-        <div class="applications card-body">
-        </div>
-      </section>
-      <br />
-    </main>
-  </div>
-
-  <footer class="footer">
-    <div class="container">
-      <p>
-        <a href="/api/requests">API Requests</a> |
-        <a href="/api/applications">API Providers</a>
-    </div>
-  </footer>
+      </footer>
 
 </body>
 

@@ -25,13 +25,13 @@ $(function () {
   
       $.ajax({
         method: 'POST',
-        url: 'api/requests',
+        url: 'api/requestList',
         data: newRequest
       })
         .then(function () {
           return $.ajax({
             method: 'GET',
-            url: 'api/applications'
+            url: 'api/requestList'
   
           });
         }).then(function (serviceType) {
@@ -82,17 +82,17 @@ $(function () {
      * GET all the waitlist data from the server.
      * Then call render to render the data.
      */
-    const requestList = function(){
+    const getRequestList = function(){
       $.ajax({
         method: 'GET',
-        url: 'api/waitinglist'
+        url: 'api/requestList'
       }).then(function(data){
-        render(data, $('.waitlist'));
+        render(data, $('.requestlist'));
       });
     }
     
     getProviderList();
-    requestList();
+    getRequestList();
   
     $('#clear').on('click', render);
   });
