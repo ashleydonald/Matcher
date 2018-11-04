@@ -1,4 +1,6 @@
-$(function () {
+$( document ).ready(function() {
+
+// $(function () {
 
   /**
    * Get the form info from the page.
@@ -26,27 +28,27 @@ $(function () {
       method: 'POST',
       url: 'api/providerList',
       data: newProvider
-    })
-      .then(function () {
-        return $.ajax({
-          method: 'GET',
-          url: 'api/providerList'
+    // })
+      // .then(function () {
+      //   return $.ajax({
+      //     method: 'GET',
+      //     url: 'api/providerList'
 
-        });
+      //   });
       }).then(function (serviceType) {
 
 
-        console.log(newProvider.serviceType);
-        console.log(newProvider);
+        $('#myModal').css('display', 'block');
+              console.log(newProvider);
 
       });
 
   };
   $('.submit').on('click', addProvider);
 
-});
+// });
 
-$(function () {
+// $(function () {
 
   /**
    * Render the providerApplication data to the appropriate part of the page.
@@ -81,4 +83,11 @@ $(function () {
   getProviderList();
 
   $('#clear').on('click', render);
+  
+  // AP (11.4) = Added function to close modal
+  $('.close').on('click', function() {
+    $('#myModal').css('display', 'none');
+  })
+
+
 });

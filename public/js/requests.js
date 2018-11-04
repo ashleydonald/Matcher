@@ -13,6 +13,7 @@ $(function () {
       customerName: $('#reserve-name').val().trim(),
       phoneNumber: $('#reserve-phone').val().trim(),
       customerEmail: $('#reserve-email').val().trim(),
+    // Compares HTML dropdown values
       serviceType: $("#serviceType :selected").val()
     };
     
@@ -30,18 +31,32 @@ $(function () {
       .then(function () {
         return $.ajax({
           method: 'GET',
-          url: 'api/requestList'
+          url: 'api/providerList'
 
         });
-      }).then(function (serviceType) {
+      }).then(function (providersList) {
+        // AP (11/4) => Updated function here
 
+        var provider = "";
 
-        console.log(newRequest.serviceType);
-        console.log(newRequest);
+        for (let i = 0; i < providersList.length; i++) {
+          if (providersList[i].serviceType === newRequest.serviceType) {
+            provider = providersList[i];
+          }
+        }
 
-      });
+        console.log('here ', provider)
+        // Code for FOR loop, modal displayed afrer submitting request.
+        const modalText = "<p> Hi "+newRequest.customerName + ", " + provider.customerName + " will care of your " + newRequest.serviceType + " issue!</p>"
+        //Adds text to existing box
+        // $('#myModal').append(modalText).css('display', 'block');
+        // Replaces the entire modal content.
+        $('.myModal-content').html(modalText)
+        // Makes the modal visible.
+        $('.myModal').css('display', 'block');
 
-  };
+    });
+  }
   $('.submit').on('click', addRequest);
 
 });
@@ -82,4 +97,9 @@ $(function () {
   getRequestList();
 
   $('#clear').on('click', render);
+
+  // AP (11.4) = Added function to close modal
+  $('.close').on('click', function() {
+    $('#myModal').css('display', 'none');
+  })
 });
