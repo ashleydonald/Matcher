@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- AP (11.4) = style added here -->
+  <!-- Required styling for the modal -->
   <style>
     .myModal {
       width: 250px;
@@ -114,7 +114,7 @@
                         <input type="text" class="form-control" id="reserve-email">
                       </div>
                       <div class="form-group">
-                        <label for="reserve-unique-id">Service Type</label>
+                        <label for="reserve-unique-id">What type of service do you need?</label>
                         <select id="serviceType" style="display:block">
                           <option value="" disabled selected>Choose from list:</option>
                           <option value="plumbing">Plumbing</option>
@@ -134,15 +134,14 @@
         </div>
       </div>
 
-      <!-- AP (11/4) -> Bootstrap modal -->
       <!-- The Modal -->
       <div id="myModal" class="myModal">
         <span class="close">&times;</span>
         <!-- Modal content -->
         <div class="myModal-content">
-          
+
         </div>
-      
+
       </div>
 
       <footer class="footer">

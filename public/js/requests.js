@@ -13,10 +13,10 @@ $(function () {
       customerName: $('#reserve-name').val().trim(),
       phoneNumber: $('#reserve-phone').val().trim(),
       customerEmail: $('#reserve-email').val().trim(),
-    // Compares HTML dropdown values
+      // Compares HTML dropdown values
       serviceType: $("#serviceType :selected").val()
     };
-    
+
     // Clear the form when submitting
     $('#reserve-name').val('');
     $('#reserve-phone').val('');
@@ -35,7 +35,6 @@ $(function () {
 
         });
       }).then(function (providersList) {
-        // AP (11/4) => Updated function here
 
         var provider = "";
 
@@ -47,15 +46,13 @@ $(function () {
 
         console.log('here ', provider)
         // Code for FOR loop, modal displayed afrer submitting request.
-        const modalText = "<p> Hi "+newRequest.customerName + ", " + provider.customerName + " will care of your " + newRequest.serviceType + " issue!</p>"
-        //Adds text to existing box
-        // $('#myModal').append(modalText).css('display', 'block');
+        const modalText = "<p> Hi " + newRequest.customerName + ", " + provider.customerName + " will take care of your " + newRequest.serviceType + " issue!</p>"
         // Replaces the entire modal content.
         $('.myModal-content').html(modalText)
         // Makes the modal visible.
         $('.myModal').css('display', 'block');
 
-    });
+      });
   }
   $('.submit').on('click', addRequest);
 
@@ -64,9 +61,9 @@ $(function () {
 $(function () {
 
   /**
-   * Render the providerApplication data to the appropriate part of the page.
-   * The first parameter is the array of providerApplications to render.
-   * The second parameter is the parent element to append to (.providerList or .requestlist).
+   * Render the requestList data to the appropriate part of the page.
+   * The first parameter is the array of requestList to render.
+   * The second parameter is the parent element to append to .requestlist.
    */
   const render = function (requestList, parent) {
     for (let i = 0; i < requestList.length; i++) {
@@ -82,7 +79,7 @@ $(function () {
 
 
   /**
-   * GET all the waitlist data from the server.
+   * GET all the requestList data from the server.
    * Then call render to render the data.
    */
   const getRequestList = function () {
@@ -98,8 +95,8 @@ $(function () {
 
   $('#clear').on('click', render);
 
-  // AP (11.4) = Added function to close modal
-  $('.close').on('click', function() {
+  // Function to close modal
+  $('.close').on('click', function () {
     $('#myModal').css('display', 'none');
   })
 });
