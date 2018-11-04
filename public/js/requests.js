@@ -15,8 +15,7 @@ $(function () {
       customerEmail: $('#reserve-email').val().trim(),
       serviceType: $("#serviceType :selected").val()
     };
-    console.log(newRequest);
-
+    
     // Clear the form when submitting
     $('#reserve-name').val('');
     $('#reserve-phone').val('');
@@ -52,19 +51,19 @@ $(function () {
   /**
    * Render the providerApplication data to the appropriate part of the page.
    * The first parameter is the array of providerApplications to render.
-   * The second parameter is the parent element to append to (.providerList or .waitlist).
+   * The second parameter is the parent element to append to (.providerList or .requestlist).
    */
-  const render = function (dataList, parent) {
-    for (let i = 0; i < dataList.length; i++) {
+  const render = function (requestList, parent) {
+    for (let i = 0; i < requestList.length; i++) {
       const applications = $('<div>').addClass('box');
-      applications.append(`<h3>${dataList[i].customerName}</h3>`);
-      applications.append(`<p>${dataList[i].customerEmail}</p>`);
-      applications.append(`<p>${dataList[i].phoneNumber}</p>`);
-      applications.append(`<p>${dataList[i].serviceType}</p>`);
+      applications.append(`<h3>${requestList[i].customerName}</h3>`);
+      applications.append(`<p>${requestList[i].customerEmail}</p>`);
+      applications.append(`<p>${requestList[i].phoneNumber}</p>`);
+      applications.append(`<p>${requestList[i].serviceType}</p>`);
 
-      parent.append(applications)
+      parent.append(applications);
     }
-  }
+  };
 
 
   /**
@@ -78,7 +77,7 @@ $(function () {
     }).then(function (data) {
       render(data, $('.requestlist'));
     });
-  }
+  };
 
   getRequestList();
 

@@ -15,8 +15,7 @@ $(function () {
       customerEmail: $('#reserve-email').val().trim(),
       serviceType: $("#serviceType :selected").val()
     };
-    console.log(newProvider);
-
+ 
     // Clear the form when submitting
     $('#reserve-name').val('');
     $('#reserve-phone').val('');
@@ -52,7 +51,7 @@ $(function () {
   /**
    * Render the providerApplication data to the appropriate part of the page.
    * The first parameter is the array of providerApplications to render.
-   * The second parameter is the parent element to append to (.providerList or .waitlist).
+   * The second parameter is the parent element to append to (.providerList or .requestList).
    */
   const render = function (dataList, parent) {
     for (let i = 0; i < dataList.length; i++) {
@@ -62,9 +61,9 @@ $(function () {
       applications.append(`<p>${dataList[i].phoneNumber}</p>`);
       applications.append(`<p>${dataList[i].serviceType}</p>`);
 
-      parent.append(applications)
+      parent.append(applications);
     }
-  }
+  };
 
   /**
    * GET all the providerList from the server.
@@ -77,7 +76,7 @@ $(function () {
     }).then(function (data) {
       render(data, $('.providerList'));
     });
-  }
+  };
 
   getProviderList();
 
