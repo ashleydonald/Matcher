@@ -18,7 +18,20 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <!-- Required styling for the jumbotron -->
+  <style>
+    .jumbotron {
+            background-color: #28a745;
+            background-image: url("./images/providers_jumbotron.png");
+            background-repeat: no-repeat;
+            background-position: bottom;
+          }
+    .jumbotron-text {
+            background-color: #28a745;
+            background-position: top;
+            color: white;
+          }
+  </style>
 
 </head>
 
@@ -75,32 +88,15 @@
       <div class="container">
 
         <div class="jumbotron">
-          <h2 class="text-center">Current Requests and Providers List</h2>
-          <br>
-          <div class="text-center">
-            <a href="/requests"><button class="btn btn-lg btn-success"> Make Request</button></a>
-            <a href="/"><button class="btn btn-lg btn-success"><span class="fa fa-home"></span></button></a>
+          <div class="jumbotron-text">
+            <h1 class="text-center">Home Services Finder</h1>
           </div>
+          <br>
         </div>
-
-        <main>
-          <section class="card">
-            <div class="card-header">
-              <h2>Requests</h2>
-            </div>
-            <div class="requests card-body">
-            </div>
-          </section>
-          <br />
-          <section class="card">
-            <div class="card-header">
-              <h2>Providers</h2>
-            </div>
-            <div class="applications card-body">
-            </div>
-          </section>
-          <br />
-        </main>
+        <div class="text-center">
+            <a href="/requests"><button class="btn btn-lg btn-success"> Make Service Request</button></a>
+            <a href="/providerApplication"><button class="btn btn-lg btn-success"> Apply to be a Provider</button></a>
+          </div>
       </div>
 
       <footer class="footer">
