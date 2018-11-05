@@ -20,7 +20,7 @@ module.exports = function(app) {
   });
 
   app.get('/providerapplication', function(req, res) {
-    res.sendFile(path.join(__dirname, '../public/providerApplication.html'));
+    res.sendFile(path.join(__dirname, '../public/providerapplication.html'));
   });
 
   app.get('/', function(req, res) {
