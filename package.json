@@ -1,13 +1,13 @@
 {
-  "name": "API matching consumer with provider",
+  "name": "matcher-v1",
   "version": "1.0.0",
   "description": "API for a matching service requests with service providers",
-  "main": "server.js",
+  "main": "web.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "web.js"
   },
-  "author": "",
+  "author": "ashley-donald",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3"
