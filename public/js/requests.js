@@ -44,16 +44,18 @@ $(function () {
           }
         }
 
-        console.log('here ', provider)
+        console.log('here ', provider);
         // Code for FOR loop, modal displayed afrer submitting request.
-        const modalText = "<p> Hi " + newRequest.customerName + ", " + provider.customerName + " will take care of your " + newRequest.serviceType + " issue!</p>"
+        const modalText = "<p> Hi " + newRequest.customerName + ", " 
+          + provider.customerName + " will take care of your " + newRequest.serviceType 
+          + " issue!</p>" + "<br>" + provider.image;
         // Replaces the entire modal content.
-        $('.myModal-content').html(modalText)
+        $('.myModal-content').html(modalText);
         // Makes the modal visible.
         $('.myModal').css('display', 'block');
 
       });
-  }
+  };
   $('.submit').on('click', addRequest);
 
 });
@@ -72,7 +74,7 @@ $(function () {
       applications.append(`<p>${requestList[i].customerEmail}</p>`);
       applications.append(`<p>${requestList[i].phoneNumber}</p>`);
       applications.append(`<p>${requestList[i].serviceType}</p>`);
-
+   
       parent.append(applications);
     }
   };
