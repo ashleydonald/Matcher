@@ -12,7 +12,7 @@ var providerList = [
      customerEmail: "mariotheelectrician@gmail.com",
      phoneNumber: "404-530-3893",
      serviceType: "electrical",
-     image: "<img class='img-responsive' src='../images/electrician.jpg' style='max-height:150px;'>"
+     image: "<img class='img-responsive' src='../images/electrician.jpg' style='max-height:250px;'>"
     },
     {   
      customerName: "Angel",
