@@ -8,4 +8,5 @@ Iceboxed:
 - Map Integration
 - Call functionality
 - Chat box
+- Picture uploading
 
